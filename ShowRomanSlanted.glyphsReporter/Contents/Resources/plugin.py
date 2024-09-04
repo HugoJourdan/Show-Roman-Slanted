@@ -32,11 +32,9 @@ class ShowRomanSlanted(ReporterPlugin):
 
 		
 				
-		Font = Glyphs.font
-		selected_master = Font.selectedFontMaster
 		scale = Glyphs.font.currentTab.scale
 
-		if selected_master.italicAngle and layer.bezierPath :
+		if layer.italicAngle and layer.bezierPath :
 
 			roman_master = self.find_corresponding_roman_italic(layer).master
 			roman_layer = layer.parent.layers[roman_master.id].copyDecomposedLayer()
